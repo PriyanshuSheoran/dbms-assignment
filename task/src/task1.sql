@@ -29,13 +29,13 @@ SELECT
 FROM mydataset;
 
 -- Select every 3rd image starting from the highest scores (positive samples)
-SELECT image_id, score, 1 AS weak_label 
+SELECT image_id, score
 FROM v1 
 WHERE rownumber % 3 = 1 
 LIMIT 10000;
 
 -- Select every 3rd image starting from the lowest scores (negative samples)
-SELECT image_id, score, 0 AS weak_label 
+SELECT image_id, score
 FROM v2 
 WHERE rownumber % 3 = 1 
 LIMIT 10000;
